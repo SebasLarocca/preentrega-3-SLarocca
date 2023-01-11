@@ -1,0 +1,75 @@
+.home_video {
+    padding: 20px;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-family: $medium;
+        background-color: $marronOscuro;
+        /* Este color lo implementé con el @each que inculí de ejemplo 
+        color: white;
+        */
+        padding: 1%;
+    }
+
+    iframe {
+        height: 90%;
+
+    }
+}
+
+.quote_video_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+        font-family: $medium;
+        font-size: 1.1rem;
+
+    }
+}
+
+.home_frase_container {
+    margin: 50px;
+    width: 50%;
+}
+
+.home_frase {
+    font-weight: $bold;
+    font-size: 28px;
+    font-family: $medium;
+    font-style: italic;
+}
+
+.home_tipo_wod {
+    font-family: $medium;
+    font-size: 1.2rem;
+    margin: 5px 0px 0px 5px;
+}
+
+.home_ejercicio {
+    font-family: $light;
+    font-size: 1rem;
+    margin: 5px 0px 0px 10px;
+}
+
+.home_foco {
+    font-family: $medium;
+    font-size: 0.9rem;
+    margin: 5px 0px 5px 10px;
+}
+
+.home_descripcion {
+    font-family: $medium;
+    font-size: 0.9rem;
+    margin: 5px 0px 15px 10px;
+}
+
+.home_wod_fecha {
+    font-family: $semiBold;
+    font-size: 1.2rem;
+    margin: 5px 5px 15px 10px;
+}

@@ -1,0 +1,62 @@
+.fondo_marron_claro {
+    background-color: $marronOscuro;
+}
+
+.alimentacion_container {
+
+    .alimentacion_carbos {
+
+        .alimentacion_carbos_texto {
+            width: 50%;
+            margin: 3% 1% 1% 1%;
+            padding: 2%;
+
+            h1 {
+                font-family: $bold;
+                font-size: 1.7rem;
+                color: $marronClaro;
+            }
+
+            p {
+                font-family: $light;
+                color: $marronClaro;
+            }
+        }
+
+        .alimentacion_carbos_img {
+            width: 50%;
+            margin: 1% 0% 1% 1%;
+            /*0% 0% 2%; t r b l */
+            border-radius: 10px 0px 0px 10px;
+            /* tl tr br bl */
+        }
+    }
+
+    .alimentacion_prote {
+
+        .alimentacion_prote_texto {
+            width: 50%;
+            margin: 3% 1% 1% 1%;
+            padding: 2%;
+
+            h2 {
+                font-family: $bold;
+                font-size: 1.7rem;
+                color: $marronClaro;
+            }
+
+            p {
+                font-family: $light;
+                color: $marronClaro;
+            }
+        }
+
+        .alimentacion_prote_img {
+            width: 50%;
+            margin: 1% 0% 1% 1%;
+            /*0% 0% 2%; t r b l */
+            border-radius: 10px 0px 0px 10px;
+            /* tl tr br bl */
+        }
+    }
+}

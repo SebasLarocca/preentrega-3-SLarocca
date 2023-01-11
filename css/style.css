@@ -1,0 +1,487 @@
+@charset "UTF-8";
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
+
+/* COlores */
+/* Fonts */
+/* Ejemplo de each */
+.white {
+  color: white; }
+
+.black {
+  color: black; }
+
+/* Ejemplo mixin */
+.ejemplo_mixin {
+  color: #EBD0A4; }
+
+/* Ejemplo map */
+.color_azulClaro {
+  background-color: #A4C8EB; }
+
+.color_azulOscuro {
+  background-color: #4B749E; }
+
+/* ejemplo extend */
+.color_extend_original, .color_extend_implementado {
+  background-color: #4B749E; }
+
+.color_extend_implementado {
+  color: #A4C8EB; }
+
+@font-face {
+  font-family: Montserrat_bold;
+  src: url("../../css/static/Montserrat-Bold.ttf"); }
+
+@font-face {
+  font-family: Montserrat_medium;
+  src: url("../../css/static/Montserrat-Medium.ttf"); }
+
+@font-face {
+  font-family: Montserrat_semibold;
+  src: url("../../css/static/Montserrat-SemiBold.ttf"); }
+
+@font-face {
+  font-family: Montserrat_light;
+  src: url("../../css/static/Montserrat-Light.ttf"); }
+
+/* Home */
+.grid {
+  display: grid;
+  grid-template-areas: "encabezado" "principal" "pie_pagina";
+  grid-template-columns: 100%;
+  grid-template-rows: 42.28px 1fr 42.28px;
+  min-height: 100vh; }
+
+.encabezado {
+  grid-area: encabezado;
+  background-color: aqua; }
+
+.principal {
+  grid-area: principal;
+  display: flex;
+  flex-direction: column; }
+  .principal img {
+    width: 100%; }
+
+.pie_pagina {
+  grid-area: pie_pagina;
+  background-color: #EBD0A4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.home_mujer_wod {
+  display: grid;
+  grid-template-areas: "area_para_solapar";
+  grid-template-columns: 100%;
+  grid-template-rows: 100%; }
+  .home_mujer_wod img {
+    grid-area: area_para_solapar; }
+  .home_mujer_wod .home_rectangulo_traslucido {
+    grid-area: area_para_solapar;
+    width: 400px;
+    height: min-content;
+    background-color: white;
+    opacity: 20%;
+    height: 191px;
+    border-radius: 10px;
+    margin: 2% 0% 0% 3.5%;
+    font-family: Montserrat_bold; }
+  .home_mujer_wod .wod_del_dia {
+    grid-area: area_para_solapar;
+    width: 400px;
+    height: min-content;
+    display: flex;
+    /* border: 2px solid $azulClaro; */
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: 2% 0% 0% 3.5%; }
+
+/* Shop */
+.oferta_del_dia {
+  grid-area: area_para_solapar;
+  width: 400px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: center;
+  margin: 6% 0% 0% 10%;
+  /*0% 0% 2%; t r b l */ }
+  .oferta_del_dia .shop_ofertas_primero {
+    font-family: Montserrat_semibold;
+    color: #EBD0A4;
+    font-size: 4rem; }
+  .oferta_del_dia .shop_ofertas_segundo {
+    font-family: Montserrat_bold;
+    color: #EBD0A4;
+    font-size: 5rem; }
+
+/* Utilicé el !important en algunas clases por que no lograba pisar las clases de bootstrap de otra forma */
+nav {
+  padding: 0 !important; }
+  nav .top-padding-0 {
+    padding: 0px; }
+  nav .navbar {
+    padding-top: 0;
+    padding-bottom: 0%;
+    /*--bs-navbar-padding-y: 0rem;*/ }
+  nav .navbar-expand-lg {
+    padding-top: 0%;
+    padding-bottom: 0%; }
+  nav .bg-light {
+    padding-top: 0%;
+    padding-bottom: 0%; }
+  nav .container-fluid {
+    background-color: #4B749E;
+    padding-top: 0%;
+    padding-bottom: 0%; }
+
+.nav-link {
+  color: #A4C8EB;
+  font-family: Montserrat_medium; }
+
+.active {
+  font-family: Montserrat_bold !important;
+  color: #EBD0A4 !important; }
+
+.nav_logo {
+  height: 30px;
+  margin-left: 10%; }
+
+.home_video {
+  padding: 20px;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column; }
+  .home_video p {
+    font-family: Montserrat_medium;
+    background-color: #9E875F;
+    /* Este color lo implementé con el @each que inculí de ejemplo 
+        color: white;
+        */
+    padding: 1%; }
+  .home_video iframe {
+    height: 90%; }
+
+.quote_video_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .quote_video_container p {
+    font-family: Montserrat_medium;
+    font-size: 1.1rem; }
+
+.home_frase_container {
+  margin: 50px;
+  width: 50%; }
+
+.home_frase {
+  font-weight: Montserrat_bold;
+  font-size: 28px;
+  font-family: Montserrat_medium;
+  font-style: italic; }
+
+.home_tipo_wod {
+  font-family: Montserrat_medium;
+  font-size: 1.2rem;
+  margin: 5px 0px 0px 5px; }
+
+.home_ejercicio {
+  font-family: Montserrat_light;
+  font-size: 1rem;
+  margin: 5px 0px 0px 10px; }
+
+.home_foco {
+  font-family: Montserrat_medium;
+  font-size: 0.9rem;
+  margin: 5px 0px 5px 10px; }
+
+.home_descripcion {
+  font-family: Montserrat_medium;
+  font-size: 0.9rem;
+  margin: 5px 0px 15px 10px; }
+
+.home_wod_fecha {
+  font-family: Montserrat_semibold;
+  font-size: 1.2rem;
+  margin: 5px 5px 15px 10px; }
+
+.contenedor_principal_historicos {
+  display: flex; }
+  .contenedor_principal_historicos .wods_historicos {
+    width: 50%;
+    background-color: #EBD0A4;
+    margin: 1% 1% 1% 1%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; }
+    .contenedor_principal_historicos .wods_historicos h1 {
+      font-family: Montserrat_bold;
+      color: #9E875F;
+      padding: 1%;
+      font-size: 2rem;
+      height: min-content;
+      width: fit-content;
+      margin: 7% 0% 0% 2%; }
+    .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container {
+      display: flex;
+      margin: 7% 0% 0% 2%;
+      width: 90%;
+      flex-wrap: wrap;
+      overflow: scroll; }
+      .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container .historico_wod_card {
+        width: 45%;
+        background-color: #9E875F;
+        border-radius: 20px;
+        color: white;
+        margin: 1% 1% 1% 1%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container .historico_wod_card .historico_wod_card_tipo {
+          font-family: Montserrat_medium;
+          font-size: 1.1rem;
+          margin: 4% 0% 2% 4%; }
+        .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container .historico_wod_card .historico_wod_card_fecha {
+          font-family: Montserrat_bold;
+          font-size: 1rem;
+          margin: 4% 4% 2% 0%; }
+        .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container .historico_wod_card .historico_wod_card_foco {
+          font-family: Montserrat_light;
+          font-size: 0.8rem;
+          margin: 0% 0% 4% 4%; }
+        .contenedor_principal_historicos .wods_historicos .historico_tarjeta_container .historico_wod_card .historico_wod_card_masInfo {
+          font-family: Montserrat_bold;
+          font-size: 1rem;
+          margin: 0% 4% 4% 0%; }
+  .contenedor_principal_historicos .historicos_imagen_principal {
+    width: 50%;
+    margin: 1% 0% 1% 1%; }
+    .contenedor_principal_historicos .historicos_imagen_principal img {
+      border-radius: 10px 0px 0px 10px; }
+
+.bases_contenedor_card {
+  width: 95%;
+  margin: 4% 0% 0% 0%; }
+
+.bases_card {
+  width: 25%;
+  margin: 0% 1% 0% 1%;
+  border-radius: 10px; }
+  .bases_card .bases_card_titulo {
+    font-family: Montserrat_bold;
+    font-size: 1.6rem;
+    margin: 4% 4% 4% 4%; }
+  .bases_card .bases_card_parrafo {
+    font-family: Montserrat_light;
+    font-size: 0.9rem;
+    margin: 4% 4% 4% 4%;
+    /* t r b l */ }
+
+.marron_claro {
+  background-color: #EBD0A4;
+  color: #9E875F; }
+
+.azul_claro {
+  /* 
+    
+    Este color lo implementé vía map
+    background-color: $azulClaro;
+    
+    */
+  color: #4B749E; }
+
+.marron_oscuro {
+  background-color: #9E875F;
+  /* 
+    
+    Este color lo implementé vía mixins
+    color: $marronClaro; 
+ 
+    */ }
+
+/* A esta clase la implementé como ejemplo de extend
+.azul_oscuro {
+    
+    background-color: $azulOscuro;
+    color: $azulClaro;
+    
+} 
+*/
+.base_cita_texto {
+  font-family: Montserrat_semibold;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 4% 0% 0% 0%;
+  /* t r b l */ }
+
+.base_cita_autor {
+  font-family: Montserrat_light;
+  font-size: 1.1rem; }
+
+.fondo_marron_claro {
+  background-color: #9E875F; }
+
+.alimentacion_container .alimentacion_carbos .alimentacion_carbos_texto {
+  width: 50%;
+  margin: 3% 1% 1% 1%;
+  padding: 2%; }
+  .alimentacion_container .alimentacion_carbos .alimentacion_carbos_texto h1 {
+    font-family: Montserrat_bold;
+    font-size: 1.7rem;
+    color: #EBD0A4; }
+  .alimentacion_container .alimentacion_carbos .alimentacion_carbos_texto p {
+    font-family: Montserrat_light;
+    color: #EBD0A4; }
+
+.alimentacion_container .alimentacion_carbos .alimentacion_carbos_img {
+  width: 50%;
+  margin: 1% 0% 1% 1%;
+  /*0% 0% 2%; t r b l */
+  border-radius: 10px 0px 0px 10px;
+  /* tl tr br bl */ }
+
+.alimentacion_container .alimentacion_prote .alimentacion_prote_texto {
+  width: 50%;
+  margin: 3% 1% 1% 1%;
+  padding: 2%; }
+  .alimentacion_container .alimentacion_prote .alimentacion_prote_texto h2 {
+    font-family: Montserrat_bold;
+    font-size: 1.7rem;
+    color: #EBD0A4; }
+  .alimentacion_container .alimentacion_prote .alimentacion_prote_texto p {
+    font-family: Montserrat_light;
+    color: #EBD0A4; }
+
+.alimentacion_container .alimentacion_prote .alimentacion_prote_img {
+  width: 50%;
+  margin: 1% 0% 1% 1%;
+  /*0% 0% 2%; t r b l */
+  border-radius: 10px 0px 0px 10px;
+  /* tl tr br bl */ }
+
+.shop_card_container {
+  width: 19%;
+  background-color: #A4C8EB;
+  border-radius: 10px;
+  margin: 3%; }
+  .shop_card_container img {
+    width: 90%;
+    margin-top: 10%;
+    border-radius: 10px; }
+  .shop_card_container .shop_card_text {
+    margin: 5%; }
+    .shop_card_container .shop_card_text .shop_card_title {
+      font-family: Montserrat_bold;
+      font-size: 1.5rem;
+      color: #4B749E; }
+    .shop_card_container .shop_card_text .shop_card_price {
+      font-family: Montserrat_semibold;
+      font-size: 1.5rem;
+      color: #4B749E; }
+    .shop_card_container .shop_card_text .shop_card_description {
+      font-family: Montserrat_light;
+      font-size: 1rem;
+      color: #4B749E !important; }
+
+.btn {
+  margin: 7% !important;
+  color: #A4C8EB;
+  background-color: #4B749E;
+  border: none; }
+
+.redes_sociales {
+  display: flex;
+  width: 30%; }
+  .redes_sociales svg {
+    fill: #9E875F;
+    height: 20px;
+    margin: 0px 5px 0px 5px; }
+
+.pie_pagina h6 {
+  color: #9E875F;
+  font-family: Montserrat_medium;
+  font-size: 0.8rem; }
+
+/* Adaptacion a tablet */
+@media screen and (max-width: 1010px) {
+  /* Shop */
+  .shop_card_container {
+    width: 25%; }
+  .oferta_del_dia .shop_ofertas_primero {
+    font-size: 2rem; }
+  .oferta_del_dia .shop_ofertas_segundo {
+    font-size: 3rem; }
+  /* Alimentación */
+  .alimentacion_carbos,
+  .alimentacion_prote {
+    flex-direction: column; }
+  /* Bases */
+  .bases_contenedor_card {
+    flex-wrap: wrap; }
+    .bases_contenedor_card .bases_card {
+      width: 40%;
+      margin: 10px; }
+  /* Historicos */
+  .contenedor_principal_historicos {
+    flex-direction: column;
+    align-items: center; }
+  .wods_historicos {
+    width: auto; }
+  .historicos_imagen_principal {
+    width: 90%;
+    border-radius: 10px 10px 10px 10px; }
+  .historico_tarjeta_container {
+    flex-direction: column; }
+    .historico_tarjeta_container .historico_wod_card {
+      width: 95% !important; } }
+
+@media screen and (max-width: 780px) {
+  .home_mujer_wod {
+    display: grid;
+    grid-template-areas: "imagen_mujer" "area_para_solapar";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 100%; }
+    .home_mujer_wod img {
+      grid-area: imagen_mujer; }
+    .home_mujer_wod .home_rectangulo_traslucido {
+      grid-area: area_para_solapar;
+      background-color: grey;
+      opacity: 10%;
+      border-radius: 10px;
+      box-shadow: 10px 5px 5px grey; }
+    .home_mujer_wod .wod_del_dia {
+      grid-area: area_para_solapar;
+      width: 400px;
+      height: min-content;
+      display: flex;
+      /* border: 2px solid $azulClaro; */
+      border-radius: 10px;
+      justify-content: space-between; }
+  .quote_video_container {
+    flex-direction: column; }
+  .home_frase_container {
+    width: 90%; }
+  .home_video {
+    width: 90%; } }
+
+/* Adaptacion a celular */
+@media screen and (max-width: 480px) {
+  /* Shop */
+  .shop_card_container {
+    width: 40%; }
+  .oferta_del_dia .shop_ofertas_primero {
+    font-size: 1.5rem; }
+  .oferta_del_dia .shop_ofertas_segundo {
+    font-size: 2rem; }
+  .bases_contenedor_card {
+    flex-direction: column; }
+    .bases_contenedor_card .bases_card {
+      width: 90%;
+      margin: 10px; }
+  /* Historicos */ }

@@ -1,0 +1,94 @@
+/* Home */
+
+.grid {
+    display: grid;
+    grid-template-areas: "encabezado"
+        "principal"
+        "pie_pagina";
+    grid-template-columns: 100%;
+    grid-template-rows: 42.28px 1fr 42.28px;
+    min-height: 100vh;
+}
+
+.encabezado {
+    grid-area: encabezado;
+    background-color: aqua;
+}
+
+.principal {
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+    }
+}
+
+.pie_pagina {
+    grid-area: pie_pagina;
+    background-color: $marronClaro;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home_mujer_wod {
+    display: grid;
+    grid-template-areas: "area_para_solapar";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+
+    img {
+        grid-area: area_para_solapar;
+    }
+
+    .home_rectangulo_traslucido {
+        grid-area: area_para_solapar;
+        width: 400px;
+        height: min-content;
+        background-color: white;
+        opacity: 20%;
+        height: 191px;
+        border-radius: 10px;
+        margin: 2% 0% 0% 3.5%;
+        font-family: $bold;
+    }
+
+    .wod_del_dia {
+        grid-area: area_para_solapar;
+        width: 400px;
+        height: min-content;
+        display: flex;
+        /* border: 2px solid $azulClaro; */
+        border-radius: 10px;
+        justify-content: space-between;
+        margin: 2% 0% 0% 3.5%;
+    }
+}
+
+/* Shop */
+
+.oferta_del_dia {
+    grid-area: area_para_solapar;
+    width: 400px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 6% 0% 0% 10%;
+    /*0% 0% 2%; t r b l */
+
+    .shop_ofertas_primero {
+        font-family: $semiBold;
+        color: $marronClaro;
+        font-size: 4rem;
+    }
+
+    .shop_ofertas_segundo {
+        font-family: $bold;
+        color: $marronClaro;
+        font-size: 5rem;
+    }
+}

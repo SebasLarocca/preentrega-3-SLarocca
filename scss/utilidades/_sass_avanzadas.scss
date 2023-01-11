@@ -1,0 +1,42 @@
+/* Ejemplo de each */
+
+@each $var in white,
+black {
+    .#{$var} {
+        color: #{$var};
+    }
+}
+
+/* Ejemplo mixin */
+
+@mixin color_mixin_ejemplo ($color) {
+    color: $color
+}
+
+.ejemplo_mixin {
+    @include color_mixin_ejemplo($marronClaro)
+}
+
+/* Ejemplo map */
+$colores_principales_map: (
+    azulClaro: $azulClaro,
+    azulOscuro: $azulOscuro
+);
+
+@each $color_principal,
+$color in $colores_principales_map {
+    .color_#{$color_principal} {
+        background-color: $color;
+    }
+}
+
+/* ejemplo extend */
+
+.color_extend_original {
+    background-color: $azulOscuro;
+}
+
+.color_extend_implementado {
+    @extend .color_extend_original;
+    color: $azulClaro
+}

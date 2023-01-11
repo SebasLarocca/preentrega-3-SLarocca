@@ -1,0 +1,74 @@
+.contenedor_principal_historicos {
+    display: flex;
+
+    .wods_historicos {
+        width: 50%;
+        background-color: $marronClaro;
+        margin: 1% 1% 1% 1%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-family: $bold;
+            color: $marronOscuro;
+            padding: 1%;
+            font-size: 2rem;
+            height: min-content;
+            width: fit-content;
+            margin: 7% 0% 0% 2%;
+        }
+
+        .historico_tarjeta_container {
+            display: flex;
+            margin: 7% 0% 0% 2%;
+            width: 90%;
+            flex-wrap: wrap;
+            overflow: scroll;
+
+            .historico_wod_card {
+                width: 45%;
+                background-color: $marronOscuro;
+                border-radius: 20px;
+                color: white;
+                margin: 1% 1% 1% 1%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .historico_wod_card_tipo {
+                    font-family: $medium;
+                    font-size: 1.1rem;
+                    margin: 4% 0% 2% 4%;
+                }
+
+                .historico_wod_card_fecha {
+                    font-family: $bold;
+                    font-size: 1rem;
+                    margin: 4% 4% 2% 0%;
+                }
+
+                .historico_wod_card_foco {
+                    font-family: $light;
+                    font-size: 0.8rem;
+                    margin: 0% 0% 4% 4%;
+                }
+
+                .historico_wod_card_masInfo {
+                    font-family: $bold;
+                    font-size: 1rem;
+                    margin: 0% 4% 4% 0%;
+                }
+            }
+        }
+    }
+
+    .historicos_imagen_principal {
+        width: 50%;
+        margin: 1% 0% 1% 1%;
+
+        img {
+            border-radius: 10px 0px 0px 10px;
+        }
+    }
+}

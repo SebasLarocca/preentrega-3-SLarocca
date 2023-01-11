@@ -1,0 +1,47 @@
+/* Utilicé el !important en algunas clases por que no lograba pisar las clases de bootstrap de otra forma */
+
+nav {
+    padding: 0 !important;
+
+    .top-padding-0 {
+        padding: 0px;
+    }
+
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0%;
+        /*--bs-navbar-padding-y: 0rem;*/
+    }
+
+    .navbar-expand-lg {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    .bg-light {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    .container-fluid {
+        background-color: $azulOscuro;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
+
+.nav-link {
+    color: $azulClaro;
+    font-family: Montserrat_medium;
+}
+
+.active {
+    font-family: Montserrat_bold !important;
+    color: $marronClaro !important;
+
+}
+
+.nav_logo {
+    height: 30px;
+    margin-left: 10%;
+}

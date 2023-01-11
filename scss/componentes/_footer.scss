@@ -1,0 +1,19 @@
+.redes_sociales {
+    display: flex;
+    width: 30%;
+
+    svg {
+        fill: $marronOscuro;
+        height: 20px;
+        margin: 0px 5px 0px 5px;
+    }
+}
+
+.pie_pagina {
+
+    h6 {
+        color: $marronOscuro;
+        font-family: $medium;
+        font-size: 0.8rem;
+    }
+}

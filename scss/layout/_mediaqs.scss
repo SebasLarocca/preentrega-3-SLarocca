@@ -1,0 +1,145 @@
+/* Adaptacion a tablet */
+
+@media screen and (max-width: 1010px) {
+    /* Shop */
+
+    .shop_card_container {
+        width: 25%;
+    }
+
+    .oferta_del_dia {
+
+        .shop_ofertas_primero {
+            font-size: 2rem;
+        }
+
+        .shop_ofertas_segundo {
+            font-size: 3rem;
+        }
+    }
+
+    /* Alimentación */
+
+    .alimentacion_carbos,
+    .alimentacion_prote {
+        flex-direction: column;
+    }
+
+    /* Bases */
+
+    .bases_contenedor_card {
+        flex-wrap: wrap;
+
+        .bases_card {
+            width: 40%;
+            margin: 10px;
+        }
+    }
+
+    /* Historicos */
+
+    .contenedor_principal_historicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wods_historicos {
+        width: auto;
+    }
+
+    .historicos_imagen_principal {
+        width: 90%;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .historico_tarjeta_container {
+
+        flex-direction: column;
+
+        .historico_wod_card {
+            width: 95% !important;
+
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 780px) {
+
+    .home_mujer_wod {
+        display: grid;
+        grid-template-areas: "imagen_mujer"
+            "area_para_solapar";
+        grid-template-columns: 100%;
+        grid-template-rows: auto 100%;
+
+        img {
+            grid-area: imagen_mujer;
+        }
+
+        .home_rectangulo_traslucido {
+            grid-area: area_para_solapar;
+            background-color: grey;
+            opacity: 10%;
+            border-radius: 10px;
+            box-shadow: 10px 5px 5px grey;
+
+        }
+
+        .wod_del_dia {
+            grid-area: area_para_solapar;
+            width: 400px;
+            height: min-content;
+            display: flex;
+            /* border: 2px solid $azulClaro; */
+            border-radius: 10px;
+            justify-content: space-between;
+        }
+    }
+
+    .quote_video_container {
+        flex-direction: column;
+    }
+
+    .home_frase_container {
+        width: 90%;
+    }
+
+    .home_video {
+        width: 90%;
+    }
+}
+
+/* Adaptacion a celular */
+@media screen and (max-width: 480px) {
+
+    /* Shop */
+    .shop_card_container {
+        width: 40%;
+    }
+
+    .oferta_del_dia {
+
+        .shop_ofertas_primero {
+            font-size: 1.5rem;
+        }
+
+        .shop_ofertas_segundo {
+            font-size: 2rem;
+        }
+    }
+
+    .bases_contenedor_card {
+        flex-direction: column;
+
+        .bases_card {
+            width: 90%;
+            margin: 10px;
+        }
+    }
+
+    /* Historicos */
+
+
+}

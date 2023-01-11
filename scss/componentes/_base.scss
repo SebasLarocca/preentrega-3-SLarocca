@@ -1,0 +1,75 @@
+.bases_contenedor_card {
+    width: 95%;
+    margin: 4% 0% 0% 0%;
+}
+
+.bases_card {
+    width: 25%;
+    margin: 0% 1% 0% 1%;
+    border-radius: 10px;
+
+    .bases_card_titulo {
+        font-family: $bold;
+        font-size: 1.6rem;
+        margin: 4% 4% 4% 4%;
+        ;
+    }
+
+    .bases_card_parrafo {
+        font-family: $light;
+        font-size: 0.9rem;
+
+        margin: 4% 4% 4% 4%;
+        /* t r b l */
+        ;
+    }
+}
+
+.marron_claro {
+    background-color: $marronClaro;
+    color: $marronOscuro;
+}
+
+.azul_claro {
+    /* 
+    
+    Este color lo implementé vía map
+    background-color: $azulClaro;
+    
+    */
+
+    color: $azulOscuro;
+}
+
+.marron_oscuro {
+    background-color: $marronOscuro;
+    /* 
+    
+    Este color lo implementé vía mixins
+    color: $marronClaro; 
+ 
+    */
+}
+
+/* A esta clase la implementé como ejemplo de extend
+.azul_oscuro {
+    
+    background-color: $azulOscuro;
+    color: $azulClaro;
+    
+} 
+*/
+
+.base_cita_texto {
+    font-family: $semiBold;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 4% 0% 0% 0%;
+    /* t r b l */
+    ;
+}
+
+.base_cita_autor {
+    font-family: $light;
+    font-size: 1.1rem;
+}
